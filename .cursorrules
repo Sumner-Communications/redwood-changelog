@@ -1,0 +1,129 @@
+# Wholesale Central Changelog - Development Rules
+
+## Project Overview
+
+This is the changelog website for Wholesale Central, a B2B eCommerce platform connecting wholesalers with retailers since 1997. The site is built with Next.js and MDX.
+
+## Adding New Changelog Entries
+
+When new changes need to be documented, follow these steps:
+
+### 1. Add Entry to `src/app/page.mdx`
+
+Add new entries at the TOP of the file (below the imports), following this format:
+
+```mdx
+---
+
+![](@/images/your-image-name.png)
+
+## Entry Title {{ date: 'YYYY-MM-DDTHH:MM:SSZ' }}
+
+Brief description of what changed and why it matters to users.
+
+### <SparkleIcon /> Bug Fixes
+
+- Fixed [issue description]
+- Resolved [issue description]
+
+### <SparkleIcon /> Improvements
+
+- Added [feature description]
+- Enhanced [improvement description]
+
+### <SparkleIcon /> New Features
+
+- Introduced [new feature]
+```
+
+### 2. Adding Images
+
+1. Place changelog images in `src/images/`
+2. Use descriptive names: `feature-name.png`, `bug-fix-overview.png`
+3. Recommended image dimensions: 1200x630px (16:9 aspect ratio)
+4. Reference images using: `![](@/images/your-image.png)`
+
+### 3. Date Format
+
+Always use ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`
+Example: `2024-12-02T00:00Z`
+
+### 4. Entry Categories
+
+Use these SparkleIcon sections as needed:
+- **Bug Fixes**: For resolved issues and errors
+- **Improvements**: For enhancements to existing features
+- **New Features**: For completely new functionality
+- **Breaking Changes**: For changes that require user action (use sparingly)
+
+### 5. Writing Style
+
+- Write from the platform's perspective (use "we" or passive voice)
+- Keep descriptions concise but informative
+- Focus on user impact, not technical details
+- Use present tense for what the change does
+- Link to documentation when relevant: [Learn more](https://learn.wholesalecentral.com)
+
+## Environment Variables
+
+Required environment variables for email subscriptions:
+
+```env
+POSTMARK_SERVER_TOKEN=your-postmark-server-token
+POSTMARK_FROM_EMAIL=changelog@wholesalecentral.com
+POSTMARK_NOTIFY_EMAIL=team@wholesalecentral.com (optional)
+NEXT_PUBLIC_SITE_URL=https://changelog.wholesalecentral.com
+```
+
+## File Structure
+
+```
+src/
+├── app/
+│   ├── api/
+│   │   └── subscribe/     # Email subscription API
+│   ├── feed.xml/          # RSS feed
+│   ├── layout.tsx         # Root layout with metadata
+│   └── page.mdx           # Main changelog content (ADD ENTRIES HERE)
+├── components/
+│   ├── Intro.tsx          # Hero section with links
+│   ├── Logo.tsx           # Wholesale Central logo
+│   ├── SignUpForm.tsx     # Email subscription form
+│   └── ...
+├── images/                # Changelog entry images
+└── styles/
+```
+
+## Brand Guidelines
+
+- Primary brand color: #EDAB2F (Wholesale Central gold)
+- Text on dark: #050E40 (dark blue)
+- Keep the existing color scheme - only update content
+- Logo files: `logo_dark_bg.svg` (for dark backgrounds), `logo_light_bg.svg` (for light)
+
+## Links
+
+- Main Site: https://www.wholesalecentral.com
+- Documentation: https://learn.wholesalecentral.com
+- Blog: https://blog.wholesalecentral.com
+
+## Sending Update Emails
+
+When a significant changelog entry is added, use Postmark to notify subscribers:
+
+1. Create a template in Postmark for changelog updates
+2. Include entry title, date, and summary
+3. Link back to the full changelog
+
+## Testing Locally
+
+```bash
+npm run dev
+```
+
+Visit http://localhost:3000 to preview changes.
+
+## RSS Feed
+
+The RSS feed at `/feed.xml` automatically includes all changelog entries. No manual updates needed.
+

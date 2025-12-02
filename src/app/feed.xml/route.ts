@@ -10,19 +10,20 @@ export async function GET(req: Request) {
   }
 
   let author = {
-    name: 'Joe Davola',
-    email: 'crazy.joe@example.com',
+    name: 'Wholesale Central',
+    email: 'support@wholesalecentral.com',
   }
 
   let feed = new Feed({
-    title: 'Commit',
-    description: 'Open-source Git client for macOS minimalists',
+    title: 'Wholesale Central Changelog',
+    description:
+      "Stay updated with the latest improvements, features, and fixes to America's leading B2B wholesale marketplace.",
     author,
     id: siteUrl,
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, Sumner Communications, Inc.`,
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },

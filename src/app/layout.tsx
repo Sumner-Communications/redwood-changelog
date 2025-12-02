@@ -21,9 +21,9 @@ const monaSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Commit - Open-source Git client for macOS minimalists',
+  title: 'Wholesale Central Changelog - Platform Updates & New Features',
   description:
-    'Commit is a lightweight Git client you can open from anywhere any time you’re ready to commit your work with a single keyboard shortcut. It’s fast, beautiful, and completely unnecessary.',
+    'Stay updated with the latest improvements, features, and fixes to America\'s leading B2B wholesale marketplace connecting wholesalers with retailers since 1997.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
