@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   title: 'Wholesale Central Changelog - Platform Updates & New Features',
   description:
     'Stay updated with the latest improvements, features, and fixes to America\'s leading B2B wholesale marketplace connecting wholesalers with retailers since 1997.',
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
