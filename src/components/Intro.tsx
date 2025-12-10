@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import { IconLink } from '@/components/IconLink'
 import { Logo } from '@/components/Logo'
-import { SignUpForm } from '@/components/SignUpForm'
 
 function BookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -49,7 +48,6 @@ export function Intro() {
         America's leading B2B wholesale marketplace connecting wholesalers
         with retailers since 1997.
       </p>
-      <SignUpForm />
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink href="https://learn.wholesalecentral.com" icon={BookIcon} className="flex-none">
           Documentation
