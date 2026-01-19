@@ -4,6 +4,33 @@ export { Layout as default } from '@/components/Layout'
 
 ---
 
+<div className="flex justify-center">
+  ![](@/images/16Jan.svg)
+</div>
+
+## What's New — January 16, 2026 {{ date: '2026-01-16T00:00Z' }}
+
+### <SparkleIcon /> Verified Supplier Badge
+
+- Suppliers can now display a "Verified Supplier" badge on their own website to build trust with buyers. Simply replace `<SUPPLIER>` with your supplier slug and add the following code to your website:
+
+```html
+<!-- Wholesale Central Verified Supplier Badge -->
+<a href="https://www.wholesalecentral.com/suppliers/<SUPPLIER>?ref=badge"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="View verified supplier profile on Wholesale Central">
+  <img src="https://www.wholesalecentral.com/suppliers/<SUPPLIER>/verified.svg"
+       alt="<SUPPLIER> - Verified Supplier on Wholesale Central"
+       loading="lazy"
+       width="200"
+       height="80" />
+</a>
+<!-- End Wholesale Central Badge -->
+```
+
+---
+
 ![](@/images/15Jan.png)
 
 ## What's New — January 15, 2026 {{ date: '2026-01-15T00:00Z' }}
