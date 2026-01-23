@@ -113,6 +113,9 @@ export const article = function Article({
         <ContentWrapper className="typography" data-mdx-content>
           {children}
         </ContentWrapper>
+        <ContentWrapper>
+          <hr className="mt-16 border-t border-gray-900/5 dark:border-white/5" />
+        </ContentWrapper>
       </div>
     </article>
   )
